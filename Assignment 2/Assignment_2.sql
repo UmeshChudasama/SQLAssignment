@@ -151,10 +151,10 @@ where c.grade is not null
 select * from salesman
 cross join customer
 
-
 select * from salesman
 cross join customer
-where salesman.city is not null
+where salesman.city = customer.city
+
 
 select s.name as salesPerson , c.cust_name as customerName , c.grade
 from salesman s
